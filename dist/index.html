@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Livingdocs Design Boilerplate</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Livingdocs Engine CSS -->
+    <link href="/components/livingdocs-engine/dist/css/livingdocs.css" rel="stylesheet" />
+
+    <!-- Livingdocs Engine Dependencies -->
+    <script src="/components/jquery/dist/jquery.js"></script>
+    <script src="/components/editable/editable.js"></script>
+
+    <!-- Livingdocs Engine -->
+    <script src="/components/livingdocs-engine/dist/livingdocs-engine.js"></script>
+    
+    <!-- Typekit -->
+    <script src="//use.typekit.net/kqd8qvu.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <!-- Configuration file of your design -->
+    <script src="/design.js" type="text/javascript"></script>
+    <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/steez.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script src="//localhost:35769/livereload.js"></script>
+
+  </head>
+  <body lang="en">
+
+    <!-- Container for the article -->
+    <div class="wrapper"></div>
+
+    <!-- Code to load and insert the article into the page -->
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+
+        // Load the design
+        doc.design.load(design.livingdocsBlog);
+
+        // Create the document
+        doc.article = doc.new({
+          data: {
+            content: [
+              // Header component
+              { "component": "head", 
+                "content": { 
+                  "text-author": "Vin Diesel",
+                  "title": "Livingdocs Makes Creating Articles Super Easy",
+                  "text": "Have you ever seen a real WYSIWYG editor? We dont think so. Its time to change that."
+                } 
+              },
+
+              // Subhead component
+              { "component": "subhead", "content": { "title": "Great Apartment" }},
+              
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "The 360-square foot apartment can be morphed into some two dozen different configurations with sliding panels mounted on ceiling tracks. Slide one panel to reveal a kitchen as tight and tidy as a ship’s galley, slide another to open a laundry room, lift a tabletop to uncover a spa full-size bathtub. “So the idea is almost like a time-based design,” explains Chang in the video, “Instead of me moving from one room to the other, I don’t move, actually, the home moves for me.”" }},
+
+              // Image component
+              { "component": "normalImage", 
+                "content": { 
+                  "image": "/images/metroid.jpg",
+                  "caption": "Samus Aran (サムス・アラン Samusu Aran), also known as Sammy."
+              }},
+
+              // Subhead component
+              { "component": "subhead", "content": { "title": "Chang’s Childhood Home" }},
+              
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
+
+              // Image row component
+              { "component": "threeImages", 
+                "content": { 
+                  "image-one": "/images/metroid.jpg",
+                  "caption-one": "One surface transformed from dining table to homework station",
+                  "image-two": "/images/metroid.jpg",
+                  "caption-two": "One surface transformed from dining table to homework station",
+                  "image-three": "/images/metroid.jpg",
+                  "caption-three": "One surface transformed from dining table to homework station",
+              }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
+
+             // Image row component
+              { "component": "twoImages", 
+                "content": { 
+                  "image-one": "/images/metroid.jpg",
+                  "caption-one": "One surface transformed from dining table to homework station",
+                  "image-two": "/images/metroid.jpg",
+                  "caption-two": "One surface transformed from dining table to homework station",
+              }},
+
+             // Quote
+              { "component": "quoteFull", 
+                "content": { 
+                  "image": "/images/zelda.jpg",
+                  "text": "I habe schon immer gesagt, meine Freund: Für solche wi dir, braucht es solche wi mir.",
+                  "source": "Alter Mann mit Krücke",
+              }},
+
+
+              // Rule component
+              { "component": "rule" },
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
+
+              // Quote component
+              { "component": "quoteNormal", 
+                "styles": {
+                  "Quite": "quote--quite"
+                },
+                "content": { 
+                  "text": "Heute ish etwas passiert",
+                  "source": "Grosser Mann mit Bart" 
+              }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space." }},
+
+              // Quote component
+              { "component": "quoteNormal", 
+                "styles": {
+                  "Loud": "quote--loud"
+                },
+                "content": { 
+                  "text": "Heute habe ich eine Baum gesehen – mit Blätter und Ästen",
+                  "source": "Mann mit grossem Bart" 
+              }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space." }},
+
+
+              // Subhead component
+              { "component": "subhead", "content": { "title": "Most Important Things" }},
+
+              // Tiles
+              { "component": "tiles", 
+                "content": {
+                  "image-one":   "/images/zelda.jpg",
+                  "image-two":   "/images/zelda.jpg",
+                  "image-three": "/images/zelda.jpg",
+                  "image-four":  "/images/zelda.jpg"
+                }
+              },
+
+              // Listing component
+              { 
+                "component": "listing",
+                "styles": { "Default": "list--default" },
+                "content": { "text": "Nintedo" }
+              },
+              { 
+                "component": "listing",
+                "styles": { "Default": "list--default" },
+                "content": { "text": "Super Nintendo" }
+              },
+              { 
+                "component": "listing",
+                "styles": { "Default": "list--default" },
+                "content": { "text": "Nintendo 64" }
+              },
+              { 
+                "component": "listing",
+                "styles": { "Default": "list--default" },
+                "content": { "text": "Gamecube" }
+              },
+              // Listing (last) component
+              { 
+                "component": "listing",
+                "styles": { "Last": "list--last" },
+                "content": { "text": "Wii U" }
+              },
+
+              // Showcase component
+              { "component": "showcase", 
+                "styles": {
+                  "Left": "showcase--left"
+                },
+                "content": { 
+                  "image": "/images/game-and-watch.png",
+                  "title": "Game and Watch",
+                  "text":  "In 1980, Nintendo launched Game & Watch—a handheld video game series developed by Yokoi. These systems do not contain interchangeable cartridges and thus the hardware was tied to the game.",
+              }},
+
+              // Showcase component
+              { "component": "showcase", 
+                "styles": {
+                  "Right": "showcase--right"
+                },
+                "content": { 
+                  "image": "/images/nes.jpg",
+                  "title": "Nintendo",
+                  "text":  "The Nintendo Entertainment System (abbreviated as NES or Nintendo) is an 8-bit video game console, which released in North America in 1985, and in Europe throughout 1986 and 1987.",
+              }},
+
+              // Showcase component
+              { "component": "showcase", 
+                "styles": {
+                  "Left": "showcase--left"
+                },
+                "content": { 
+                  "image": "/images/ds.jpg",
+                  "title": "Nintendo DS",
+                  "text":  "Although originally advertised as an alternative to the Game Boy Advance, the Nintendo DS replaced the Game Boy line after its initial release in 2004.",
+              }},
+
+            ],
+            design: {
+              name: 'livingdocsBlog'
+            }
+          }
+        });
+
+        // Insert the article into the page
+        doc.article.appendTo('.wrapper', {
+          interactive: true,
+          loadResources: false
+        });
+      });
+
+    </script>
+  </body>
+</html>

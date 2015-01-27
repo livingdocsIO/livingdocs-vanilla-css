@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    #STEEZ
+\*------------------------------------*/
+/**
+ * CONTENTS
+ *
+ *
+ * BASE
+ * Page.................Global page styles
+ * Headings.............H1–H6 styles.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ */
+/**
+ * Typesizes are based on http://modularscale.com/scale/?px1=20&px2=15&ra1=1.5&ra2=0
+ */
+
+
+/**
+ * Page 
+ */ 
+html {
+  color: #333;
+  font-weight: 400;
+  font-size: 1.25em; /* 20px */
+  line-height: 1.4; /* 28px */
+  font-family: "freight-text-pro", serif;
+  
+  min-height: 100%;
+  overflow-y: scroll;
+  background-color: white;
+
+  -webkit-text-size-adjust: 100%; 
+      -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1, "kern" 1;
+     -moz-font-feature-settings: "liga" 1, "dlig" 1, "kern" 1;
+          font-feature-settings: "liga" 1, "dlig" 1, "kern" 1;
+}
+
+.wrapper {
+  width: 577px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/**
+ * Shared styles (vertical rhythm) 
+ *
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */ 
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+  margin-bottom: 28px; /* line-height */
+  margin-bottom: 1.4rem; /* line-height */
+}
+
+
+/**
+ * Headings 
+ */ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.alpha {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.beta {
+  font-size: 23px;
+  font-size: 1.406rem;
+}
