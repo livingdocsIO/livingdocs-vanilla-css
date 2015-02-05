@@ -38,182 +38,132 @@
       $(document).ready(function() {
 
         // Load the design
-        doc.design.load(design.livingdocsBlog);
+        doc.design.load(design.vanilla);
 
         // Create the document
         doc.article = doc.new({
           data: {
             content: [
               // Header component
-              { "component": "head", 
+              { "component": "headPicture", 
                 "content": { 
-                  "text-author": "Vin Diesel",
-                  "title": "Livingdocs Makes Creating Articles Super Easy",
-                  "text": "Have you ever seen a real WYSIWYG editor? We dont think so. Its time to change that."
+                  "text-dateline": "The Drone War",
+                  "title": "Drone Strikes Test Legal Grounds for War on Terror",
+                  "text-topic": "Politics",
+                  "text-date": "6 Februar 13",
+                  "text-author": "Cora Currier",
+                  "image": "/images/drone-01.jpg",
+                  "text-image-caption": "A U.S. Air Force MQ-1 Predator unmanned aerial vehicle"
                 } 
               },
 
               // Subhead component
-              { "component": "subhead", "content": { "title": "Great Apartment" }},
+              // { "component": "subhead", 
+              //   "content": { "title": "Great Apartment" }
+              // },
               
               // Paragraph component
-              { "component": "paragraph", "content": { "text": "The 360-square foot apartment can be morphed into some two dozen different configurations with sliding panels mounted on ceiling tracks. Slide one panel to reveal a kitchen as tight and tidy as a ship’s galley, slide another to open a laundry room, lift a tabletop to uncover a spa full-size bathtub. “So the idea is almost like a time-based design,” explains Chang in the video, “Instead of me moving from one room to the other, I don’t move, actually, the home moves for me.”" }},
-
-              // Image component
-              { "component": "normalImage", 
-                "content": { 
-                  "image": "/images/metroid.jpg",
-                  "caption": "Samus Aran (サムス・アラン Samusu Aran), also known as Sammy."
-              }},
-
-              // Subhead component
-              { "component": "subhead", "content": { "title": "Chang’s Childhood Home" }},
-              
-              // Paragraph component
-              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
-
-              // Image row component
-              { "component": "threeImages", 
-                "content": { 
-                  "image-one": "/images/metroid.jpg",
-                  "caption-one": "One surface transformed from dining table to homework station",
-                  "image-two": "/images/metroid.jpg",
-                  "caption-two": "One surface transformed from dining table to homework station",
-                  "image-three": "/images/metroid.jpg",
-                  "caption-three": "One surface transformed from dining table to homework station",
-              }},
+              { "component": "paragraph", "content": { "text": "In his second inaugural address, President Barack Obama declared that “a decade of war is now ending.” White House press secretary Jay Carney later said there was “no question” that the U.S. conflict with al-Qaida was “entering a new phase.”" }},
 
               // Paragraph component
-              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
-
-             // Image row component
-              { "component": "twoImages", 
-                "content": { 
-                  "image-one": "/images/metroid.jpg",
-                  "caption-one": "One surface transformed from dining table to homework station",
-                  "image-two": "/images/metroid.jpg",
-                  "caption-two": "One surface transformed from dining table to homework station",
-              }},
-
-             // Quote
-              { "component": "quoteFull", 
-                "content": { 
-                  "image": "/images/zelda.jpg",
-                  "text": "I habe schon immer gesagt, meine Freund: Für solche wi dir, braucht es solche wi mir.",
-                  "source": "Alter Mann mit Krücke",
-              }},
-
-
-              // Rule component
-              { "component": "rule" },
+              { "component": "paragraph", "content": { "text": "That day in Yemen, a U.S. drone strike reportedly killed three suspected al-Qaida militants. It was one of several strikes there that week and followed a spate of them in Pakistan. Outgoing Secretary of Defense Leon Panetta said this weekend that drone strikes “ought to continue to be a tool we ought to use where necessary.”" }},
 
               // Paragraph component
-              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space. One surface transformed from dining table to homework station to workbench with the addition or subtraction of a cloth or a layer of newspaper; chairs folded for easy storage, even the sofa could be taken apart. Chang’s current apartment is just a high-tech improvement on this modular style of living." }},
+              { "component": "paragraph", "content": { "text": "Like the war in Afghanistan, these and hundreds of other drone strikes have occurred under the authority of a concise law passed one week after 9/11. It reads:" }},
 
               // Quote component
-              { "component": "quoteNormal", 
-                "styles": {
-                  "Quite": "quote--quite"
-                },
-                "content": { 
-                  "text": "Heute ish etwas passiert",
-                  "source": "Grosser Mann mit Bart" 
-              }},
-
-              // Paragraph component
-              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space." }},
-
-              // Quote component
-              { "component": "quoteNormal", 
+              { "component": "quote", 
                 "styles": {
                   "Loud": "quote--loud"
                 },
                 "content": { 
-                  "text": "Heute habe ich eine Baum gesehen – mit Blätter und Ästen",
-                  "source": "Mann mit grossem Bart" 
+                  "text": "That the President is authorized to use all necessary and appropriate force against those nations, organizations, or persons he determines planned, authorized, committed, or aided the terrorist attacks that occurred on September 11, 2001, or harbored such organizations or persons, in order to prevent any future acts of international terrorism against the United States by such nations, organizations or persons."
+              }},
+
+              // Subhead component
+              { "component": "subhead", "content": { "title": "New phase" }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "That law – known as the 2001 Authorization for Use of Military Force, or AUMF – is now more than 11 years old. Will it cover this “new phase” of war?" }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Obama, like President George W. Bush before him, has claimed that the 2001 authorization is the domestic legal basis of the authority to kill and detain not onlymembers of al-Qaida and the Taliban in Afghanistan but also their “associated forces.” Courts have largely agreed with that interpretation, and in 2011 Congress codified it in authorizing military detention." }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "A Justice Department memo – published Monday by NBC News – repeatedly cites Congress’ authorization in laying out the case for targeting a U.S. citizen “who is a senior operational leader of al-Qaida or an associated force.”" }},
+
+              // Quote component
+              { "component": "quote", 
+                "styles": {
+                  "Quite": "quote--quite"
+                },
+                "content": { 
+                  "text": "Officials note the AUMF does not have a geographic boundary."
               }},
 
               // Paragraph component
-              { "component": "paragraph", "content": { "text": "Incredibly, this space was Chang’s childhood home, and once housed him, his parents, three sisters, and a boarder – 360-square feet divided seven ways. As a result, the family, like many Hong Kongers, had to be ingenious about use of space." }},
+              { "component": "paragraph", "content": { "text": "But legal scholars say the AUMF’s authority to detain and kill militants may be undermined if there is no “core” al-Qaida group to speak of, or when active conflict in Afghanistan ends.  It may also falter when it isn’t clear exactly how a group or individual is tied to al-Qaida – such as in the web of militant and extremist groups operating in Africa and elsewhere that may claim an affiliation or be ideologically aligned." }},
 
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "“There’s room for shoe-horning them into the AUMF,” says Robert Chesney, a professor at University of Texas School of Law. “But any honest assessment has to concede it’s not obvious that all the more loosely affiliated groups are encompassed.”" }},
 
-              // Subhead component
-              { "component": "subhead", "content": { "title": "Most Important Things" }},
-
-              // Tiles
-              { "component": "tiles", 
-                "content": {
-                  "image-one":   "/images/zelda.jpg",
-                  "image-two":   "/images/zelda.jpg",
-                  "image-three": "/images/zelda.jpg",
-                  "image-four":  "/images/zelda.jpg"
-                }
-              },
-
-              // Listing component
-              { 
-                "component": "listing",
-                "styles": { "Default": "list--default" },
-                "content": { "text": "Nintedo" }
-              },
-              { 
-                "component": "listing",
-                "styles": { "Default": "list--default" },
-                "content": { "text": "Super Nintendo" }
-              },
-              { 
-                "component": "listing",
-                "styles": { "Default": "list--default" },
-                "content": { "text": "Nintendo 64" }
-              },
-              { 
-                "component": "listing",
-                "styles": { "Default": "list--default" },
-                "content": { "text": "Gamecube" }
-              },
-              // Listing (last) component
-              { 
-                "component": "listing",
-                "styles": { "Last": "list--last" },
-                "content": { "text": "Wii U" }
-              },
-
-              // Showcase component
-              { "component": "showcase", 
+              // Image component
+              { "component": "image", 
                 "styles": {
-                  "Left": "showcase--left"
+                  "Normal": "image--normal"
                 },
                 "content": { 
-                  "image": "/images/game-and-watch.png",
-                  "title": "Game and Watch",
-                  "text":  "In 1980, Nintendo launched Game & Watch—a handheld video game series developed by Yokoi. These systems do not contain interchangeable cartridges and thus the hardware was tied to the game.",
+                  "image": "/images/stop-drones.jpg"
               }},
 
-              // Showcase component
-              { "component": "showcase", 
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "The AUMF doesn’t include an expiration date. But the law does have its limits, says Chesney. “It’s not claiming an armed conflict with all terrorism, but with al-Qaida and its associated forces. In theory, there can come an end.”" }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Last November, shortly before he stepped down as the Pentagon’s general counsel, Jeh Johnson gave a speech on that end. He spoke of a “tipping point,” when the U.S. counterterrorism efforts “should no longer be considered an ‘armed conflict’ against al-Qaida and its associated forces.” Counterterror efforts would then be aimed against individuals and could be handled primarily by law enforcement." }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Johnson conceded it was hard to imagine that tipping point. There would be no “peace treaty” to mark it, he said, and he could “offer no prediction about when this conflict will end.”" }},
+
+              // Image component
+              { "component": "image", 
                 "styles": {
-                  "Right": "showcase--right"
+                  "Full width": "image--full"
                 },
                 "content": { 
-                  "image": "/images/nes.jpg",
-                  "title": "Nintendo",
-                  "text":  "The Nintendo Entertainment System (abbreviated as NES or Nintendo) is an 8-bit video game console, which released in North America in 1985, and in Europe throughout 1986 and 1987.",
+                  "image": "/images/stop-drones.jpg"
               }},
 
-              // Showcase component
-              { "component": "showcase", 
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "A preview of the dilemma came in 2011, when the U.S. indicted a Somali man named Ahmed Abdulkadir Warsame in federal court in New York. Warsame was a member of Al-Shabaab, a group in Somalia, and had ties to al-Qaida in the Arabian Peninsula, but he was not connected to any plot against the U.S. He had initially been held by the military, but according to Newsweek reporter Daniel Klaidman, the Obama administration was unsure where he fit under the law." }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Jack Goldsmith, a professor at Harvard Law School and former head of the Office of Legal Counsel for President Bush in 2003 and 2004, says “the AUMF is losing its efficacy. We’re in a place when we’re engaged in types of warfare that the nation hasn’t openly debated.”" }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "The “shoehorn” approach may eventually run into legal gray area. Chesney points out that court decisions upholding military detention have generally been linked in some way to the conflict in Afghanistan. (So far, U.S. courts have not taken up lawsuits challenging targeted killing.)" }},
+
+              // Image component
+              { "component": "image", 
                 "styles": {
-                  "Left": "showcase--left"
+                  "Left aligned": "image--left-aligned"
                 },
                 "content": { 
-                  "image": "/images/ds.jpg",
-                  "title": "Nintendo DS",
-                  "text":  "Although originally advertised as an alternative to the Game Boy Advance, the Nintendo DS replaced the Game Boy line after its initial release in 2004.",
+                  "image": "/images/stop-drones.jpg"
               }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "“When the war in Afghanistan ends, and if core al-Qaida is decimated, how do we define who we are at war with?” says Hina Shamsi, director of the National Security Project at the American Civil Liberties Union." }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Shamsi argues that the Obama administration is already relying on an overbroad interpretation of the AUMF to justify strikes against alleged militants in Yemen or Somalia without demonstrating precisely how they are associated with al-Qaida or engaged in anti-U.S. hostilities." }},
+
+              // Paragraph component
+              { "component": "paragraph", "content": { "text": "Militant groups have emerged as a threat in North Africa – some claiming an affiliation with al-Qaida. The degree to which those groups are plotting against the U.S. or interested in regional control is still being debated. The U.S. is expanding its presence in the region, butat least initially, the government says it is bolstering surveillance and training and assistance for local governments, not taking military action." }},
 
             ],
             design: {
-              name: 'livingdocsBlog'
+              name: 'vanilla'
             }
           }
         });

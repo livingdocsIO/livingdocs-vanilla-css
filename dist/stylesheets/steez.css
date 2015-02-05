@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #STEEZ
+    #STEEZ.CSS
 \*------------------------------------*/
 /**
  * CONTENTS
@@ -14,17 +14,23 @@
  * Page-foot............The main page footer.
  * Buttons..............Button elements.
  *
- */
-/**
+ *
  * Typesizes are based on http://modularscale.com/scale/?px1=20&px2=15&ra1=1.5&ra2=0
+ *
  */
 
 
+
+
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
 /**
  * Page 
  */ 
 html {
-  color: #333;
+  color: rgba(0,0,0,.87);
   font-weight: 400;
   font-size: 1.25em; /* 20px */
   line-height: 1.4; /* 28px */
@@ -44,14 +50,16 @@ html {
 }
 
 .wrapper {
-  width: 577px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+
+  max-width: 864px;
+  margin-left: 151px;
 }
 
 
+
 /**
- * Shared styles (vertical rhythm) 
+ * Shared styles
  *
  * Where `margin-bottom` is concerned,this value will be the same as the
  * base line-height. This allows us to keep a consistent vertical rhythm.
@@ -68,6 +76,7 @@ pre {
 }
 
 
+
 /**
  * Headings 
  */ 
@@ -77,9 +86,227 @@ h1, h2, h3, h4, h5, h6 {
 
 .alpha {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 1.875rem; /* 30px */
 }
 .beta {
   font-size: 23px;
-  font-size: 1.406rem;
+  font-size: 1.406rem; /* 23px */
 }
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+/**
+ * Head -> head.html
+ */
+.head {
+  margin-top: 70px;
+  margin-bottom: 42px;
+}
+  
+  .head__dateline {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+    display: block;
+    margin-bottom: 14px;  
+  }
+
+  .head__title {
+    font-size: 50px;
+    font-weight: 600;
+    font-style: italic;
+
+    margin-bottom: 14px;
+  }
+
+  .head__subline {
+    margin-bottom: 14px;
+  }
+
+    .head__meta {
+      font-size: 15px;
+      text-transform: uppercase;
+
+      display: inline-block;
+    }
+    .head__meta::after {
+      color: rgba(0,0,0,.87);
+
+      margin-left: 14px;
+      margin-right: 12px;
+
+      content: "/";
+    }
+    .head__meta:last-child::after {
+      content: none;
+    }
+    .head__meta--date {
+      color: rgba(0,0,0,.54);
+    }
+    .head__meta--author {
+      text-transform: none;
+      color: rgba(0,0,0,.54);
+    }
+      .head__authors-name {
+        color: rgba(0,0,0,.87);
+        text-transform: uppercase;
+        margin-left: 2px;
+      }
+  
+  .head__image {
+    margin-left: -151px;
+  }
+    .head__image-caption {
+      font-size: 15px;
+      padding-left: 151px;
+      padding-top: 7px;
+      color: rgba(0,0,0,.54);
+    }
+
+
+
+/**
+ * Subhead -> subhead.html
+ */
+.subhead {
+  margin-left: 144px;
+  margin-right: 144px;
+}
+
+
+
+/**
+ * Paragraph -> paragraph.html
+ */
+.paragraph {
+  margin-left: 144px;
+  margin-right: 144px;
+}
+
+
+
+/**
+ * Quote -> quote.html
+ */
+.quote .quote__text:before{
+  content: "\201C";
+  content: open-quote;
+}
+.quote .quote__text:after{
+  content: "\201D";
+  content: close-quote;
+}
+
+/* Quite quote */
+.quote--quite {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Helvetica Neue", serif;
+
+  float: left;
+  width: 227px;
+
+  margin-top: 28px;
+  margin-right: 28px;
+  margin-bottom: 28px;
+  padding-top: 7px;
+  padding-left: 28px;
+  padding-bottom: 7px;
+
+  border-left: 3px solid rgba(0,0,0,.87);
+}
+
+  .quote--quite .quote__text {
+    margin-bottom: 0;
+  }
+
+/* Loud quote */
+.quote--loud {
+  position: relative;
+  
+  text-align: center;
+  
+  margin-top: 42px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 42px;
+}
+
+  .quote--loud .quote__text {
+    font-size: 23px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+
+
+/**
+ * Image -> image.html
+ */
+.image__caption {
+  font-size: 15px;
+  color: rgba(0,0,0,.54);
+}
+
+/* Normal image */
+.image--normal {
+  position: relative;
+  padding-left: 144px;
+  padding-right: 144px;
+}
+  .image--normal .image__caption  {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    text-align: right;
+
+    width: 130px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0,0,0,.57);
+  }
+
+ /* Full width image */
+.image--full {
+  position: relative;
+
+  margin-left: -161px;
+  border: 10px solid rgba(0,0,0,.87);
+}
+
+  .image--full .image__caption  {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Helvetica Neue", sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.23);
+
+    padding: 28px;
+
+    background-color: rgba(0,0,0,.05);
+  }
+
+/* Full width image */
+.image--left-aligned { 
+  float: left;
+  width: 360px;
+  margin-top: 7px;
+  margin-right: 28px;
+  margin-bottom: 14px;
+}
+  .image--left-aligned .image__caption {
+    padding-top: 7px;  
+  }
+

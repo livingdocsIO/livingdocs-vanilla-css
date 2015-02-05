@@ -1,0 +1,33 @@
+<script type="ld-conf">
+{
+  "label": "Bild",
+  "directives": {
+    "image": {
+      "imageRatios": ["4:3", "3:4", "3:2", "2:3"],
+      "allowOriginalRatio": true
+    }
+  },
+  "styles": [
+    {
+      "name": "Normal",
+      "type": "option",
+      "value": "image--normal"
+    },
+    {
+      "name": "Full width",
+      "type": "option",
+      "value": "image--full"
+    },
+    {
+      "name": "Left aligned",
+      "type": "option",
+      "value": "image--left-aligned"
+    }
+  ]  
+}
+</script>
+
+<figure class="image">
+  <img doc-image="image" class="image__item"/>
+  <figcaption doc-editable="caption" class="image__caption">Caption (optional)</figcaption>
+</figure>

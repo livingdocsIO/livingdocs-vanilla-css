@@ -1,5 +1,5 @@
 {
-  "namespace": "livingdocsBlog",
+  "namespace": "vanilla",
   "version": 1,
   "css": ["/stylesheets/steez.css"]
 }

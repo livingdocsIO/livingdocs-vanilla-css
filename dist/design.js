@@ -1,7 +1,7 @@
-(function() { this.design || (this.design = {}); design.livingdocsBlog = (function() { return {
+(function() { this.design || (this.design = {}); design.vanilla = (function() { return {
   "config": {
     "version": 1,
-    "namespace": "livingdocsBlog",
+    "namespace": "vanilla",
     "css": [
       "/stylesheets/steez.css"
     ],
@@ -10,15 +10,9 @@
         "id": "Headers",
         "title": "Headers",
         "templates": [
+          "headPicture",
           "head",
           "subhead"
-        ]
-      },
-      "Image Tiles": {
-        "id": "Image Tiles",
-        "title": "Image Tiles",
-        "templates": [
-          "tiles"
         ]
       },
       "Spacing": {
@@ -32,20 +26,15 @@
         "id": "Text",
         "title": "Text",
         "templates": [
-          "lastListing",
-          "listing",
           "paragraph",
-          "quoteFull",
-          "quoteNormal"
+          "quote"
         ]
       },
       "images": {
         "id": "images",
         "title": "images",
         "templates": [
-          "normalImage",
-          "showcase",
-          "threeImages",
+          "image",
           "twoImages"
         ]
       }
@@ -54,19 +43,19 @@
   },
   "templates": [
     {
+      "id": "headPicture",
+      "title": "Title",
+      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n  <figure class=\"head__image\">\n    <img doc-image=\"image\" class=\"head__image-item\">\n    <figcaption doc-editable=\"text-image-caption\" class=\"head__image-caption\">Caption</figcaption>\n  </figure>\n</header>"
+    },
+    {
       "id": "head",
       "title": "Title and lead",
-      "html": "<header class=\"head\">\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <span class=\"head__author\">Written by <address doc-editable=\"text-author\" rel=\"author\">Author name</address></span>\n  <p doc-editable=\"text\" class=\"head__lead\">Subtitle</p>\n</header>"
+      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n</header>"
     },
     {
       "id": "subhead",
       "title": "Subhead",
-      "html": "<h2 doc-editable=\"title\" class=\"subhead\">Subhead</h2>"
-    },
-    {
-      "id": "tiles",
-      "title": "Tiles",
-      "html": "<div class=\"tiles\"><div doc-image=\"image-one\" class=\"tiles__item tiles__item--large\"></div><div doc-image=\"image-two\" class=\"tiles__item tiles__item--small\"></div><div doc-image=\"image-three\" class=\"tiles__item tiles__item--small\"></div><div doc-image=\"image-four\" class=\"tiles__item tiles__item--small\"></div></div>"
+      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>"
     },
     {
       "id": "rule",
@@ -74,43 +63,14 @@
       "html": "<hr class=\"rule\">"
     },
     {
-      "id": "lastListing",
-      "title": "Last listing",
-      "html": "<div class=\"list list--last\"><p doc-editable=\"text\" class=\"list__item\">List</p></div>"
-    },
-    {
-      "id": "listing",
-      "title": "Listing",
-      "html": "<div class=\"list\"><p doc-editable=\"text\" class=\"list__item\">List</p></div>",
-      "styles": [
-        {
-          "id": "Default",
-          "name": "Default",
-          "type": "option",
-          "value": "list--default"
-        },
-        {
-          "id": "Last",
-          "name": "Last",
-          "type": "option",
-          "value": "list--last"
-        }
-      ]
-    },
-    {
       "id": "paragraph",
       "title": "Paragraph",
-      "html": "<p doc-editable=\"text\" class=\"paragraph\">Hit it and tell a funky story …</p>"
+      "html": "<p doc-editable=\"text\" class=\"paragraph\">Tell a funky story …</p>"
     },
     {
-      "id": "quoteFull",
-      "title": "Fullscreen Quote",
-      "html": "<blockquote class=\"quote-full\"><div doc-image=\"image\" class=\"quote-full__image\"> <div class=\"quote_full__background\"></div><div class=\"quote-full__content\"><p doc-editable=\"text\" class=\"quote-full__text\"></p><footer doc-editable=\"source\" class=\"quote-full__source\"></footer></div></div></blockquote>"
-    },
-    {
-      "id": "quoteNormal",
-      "title": "Normal Quote",
-      "html": "<blockquote class=\"quote\"><p doc-editable=\"text\" class=\"quote__text\"></p><footer doc-editable=\"source\" class=\"quote__source\"></footer></blockquote>",
+      "id": "quote",
+      "title": "Quote",
+      "html": "<blockquote class=\"quote\">\n  <p doc-editable=\"text\" class=\"quote__text\">Quoted text</p>\n  <footer doc-editable=\"source\" class=\"quote__source\">Source (optional)</footer>\n</blockquote>",
       "styles": [
         {
           "id": "Quite",
@@ -127,38 +87,34 @@
       ]
     },
     {
-      "id": "normalImage",
-      "title": "Normal image",
-      "html": "<figure class=\"image\"><img doc-image=\"image\" class=\"image__item\"><figcaption doc-editable=\"caption\" class=\"image__caption\">Caption</figcaption></figure>"
-    },
-    {
-      "id": "showcase",
-      "title": "Showcase",
-      "html": "<div class=\"showcase\"><div doc-image=\"image\" class=\"showcase__image\"></div><div class=\"showcase__content\"><h3 doc-editable=\"title\" class=\"showcase__title zeta\"></h3><p doc-editable=\"text\" class=\"showcase__text\"></p></div></div>",
+      "id": "image",
+      "title": "image",
+      "html": "<figure class=\"image\">\n  <img doc-image=\"image\" class=\"image__item\">\n  <figcaption doc-editable=\"caption\" class=\"image__caption\">Caption (optional)</figcaption>\n</figure>",
       "styles": [
         {
-          "id": "Left",
-          "name": "Left",
+          "id": "Normal",
+          "name": "Normal",
           "type": "option",
-          "value": "showcase--left"
+          "value": "image--normal"
         },
         {
-          "id": "Right",
-          "name": "Right",
+          "id": "Full width",
+          "name": "Full width",
           "type": "option",
-          "value": "showcase--right"
+          "value": "image--full"
+        },
+        {
+          "id": "Left aligned",
+          "name": "Left aligned",
+          "type": "option",
+          "value": "image--left-aligned"
         }
       ]
     },
     {
-      "id": "threeImages",
-      "title": "Three images in a row",
-      "html": "<div class=\"image-row image-row--three-images\"><figure class=\"image-row__item\"><img doc-image=\"image-one\" class=\"image-row__image\"><figcaption doc-editable=\"caption-one\" class=\"image-row__caption\">Caption</figcaption></figure><figure class=\"image-row__item\"><img doc-image=\"image-two\" class=\"image-row__image\"><figcaption doc-editable=\"caption-two\" class=\"image-row__caption\">Caption</figcaption></figure><figure class=\"image-row__item\"><img doc-image=\"image-three\" class=\"image-row__image\"><figcaption doc-editable=\"caption-three\" class=\"image-row__caption\">Caption</figcaption></figure></div>"
-    },
-    {
       "id": "twoImages",
       "title": "Two images in a row",
-      "html": "<div class=\"image-row image-row--two-images\"><figure class=\"image-row__item\"><img doc-image=\"image-one\" class=\"image-row__image\"><figcaption doc-editable=\"caption-one\" class=\"image-row__caption\">Caption</figcaption></figure><figure class=\"image-row__item\"><img doc-image=\"image-two\" class=\"image-row__image\"><figcaption doc-editable=\"caption-two\" class=\"image-row__caption\">Caption</figcaption></figure></div>"
+      "html": "<div class=\"image-row image-row--two-images\">\n  <figure class=\"image-row__item\">\n    <img doc-image=\"image-one\" class=\"image-row__image\">\n    <figcaption doc-editable=\"caption-one\" class=\"image-row__caption\">Caption</figcaption>\n  </figure>\n  <figure class=\"image-row__item\">\n    <img doc-image=\"image-two\" class=\"image-row__image\">\n    <figcaption doc-editable=\"caption-two\" class=\"image-row__caption\">Caption</figcaption>\n  </figure>\n</div>"
     }
   ]
 };})();}).call(this);
