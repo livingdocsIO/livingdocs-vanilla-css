@@ -12,16 +12,6 @@
       "label": "Title"
     },
     {
-      "name": "Title and lead",
-      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n</header>",
-      "label": "Title and lead"
-    },
-    {
-      "name": "Subhead",
-      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
-      "label": "Subhead"
-    },
-    {
       "name": "Rule",
       "html": "<hr class=\"rule\">",
       "label": "Rule"
@@ -30,6 +20,16 @@
       "name": "Paragraph",
       "html": "<p doc-editable=\"text\" class=\"paragraph\">Tell a funky story &#x2026;</p>",
       "label": "Paragraph"
+    },
+    {
+      "name": "Title and lead",
+      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n</header>",
+      "label": "Title and lead"
+    },
+    {
+      "name": "Subhead",
+      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
+      "label": "Subhead"
     },
     {
       "name": "Quote",

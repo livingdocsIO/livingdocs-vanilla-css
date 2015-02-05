@@ -19,16 +19,6 @@ grunt.initConfig
           return src.split('/').pop()[0] != '_' && (src.indexOf('.css') != -1 || src.indexOf('.less') != -1)
       ]
 
-  compass:
-    dist:
-      options:
-        sassDir: 'source/stylesheets/'
-        cssDir: '.tmp/source/stylesheets/'
-        imagesDir: 'source/images/',
-        require: [
-          'susy',
-          'breakpoint'
-        ]
 
   jade:
     compile:
@@ -134,7 +124,6 @@ grunt.initConfig
 
 grunt.registerTask "postCompile", [
   "recess"
-  "compass"
   "copy:assets"
   "copy:stylesheets"
   "copy:tmpToDist"
