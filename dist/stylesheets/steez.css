@@ -7,12 +7,15 @@
  *
  * BASE
  * Page.................Global page styles
- * Headings.............H1–H6 styles.
+ * Shared styles........Consistent vertical rhythm
+ * Headings.............H1–H6 styles
  *
  * COMPONENTS
- * Page-head............The main page header.
- * Page-foot............The main page footer.
- * Buttons..............Button elements.
+ * Head.................Article head
+ * Subhead..............Subhead
+ * Paragraph............Body text
+ * Quotes...............Quote
+ * Image................Various image formats
  *
  *
  * Typesizes are based on http://modularscale.com/scale/?px1=20&px2=15&ra1=1.5&ra2=0

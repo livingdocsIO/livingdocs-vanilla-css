@@ -39,7 +39,7 @@ grunt.initConfig
         ext: '.html'
       ]
 
-  lddesigns:
+  lddesign:
     development:
       options:
         # templates do not work unminified. Is there a bug in livingdocs-engine?
@@ -144,13 +144,13 @@ grunt.registerTask "postCompile", [
 grunt.registerTask "default", [
   "clean:preBuild"
   "jade"
-  "lddesigns:development"
+  "lddesign:development"
   "postCompile"
 ]
 
 grunt.registerTask "build", [
   "clean:preBuild"
-  "lddesigns:build"
+  "lddesign:build"
   "postCompile"
 ]
 

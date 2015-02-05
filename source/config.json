@@ -1,5 +1,6 @@
 {
-  "namespace": "vanilla",
-  "version": 1,
-  "css": ["/stylesheets/steez.css"]
+  "name": "vanilla",
+  "label": "Vanilla",
+  "version": "0.0.1",
+  "css": ["./stylesheets/steez.css"]
 }
