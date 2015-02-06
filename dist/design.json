@@ -125,17 +125,17 @@
       "label": "Subhead"
     },
     {
+      "name": "paragraph",
+      "html": "<p doc-editable=\"text\" class=\"paragraph\">Paragraph</p>",
+      "label": "Paragraph"
+    },
+    {
       "name": "quote",
       "html": "<blockquote class=\"quote\">\n  <p doc-editable=\"text\" class=\"quote__text\">Quoted text</p>\n  <footer doc-editable=\"source\" class=\"quote__source\">Source (optional)</footer>\n</blockquote>",
       "label": "Quote",
       "properties": [
         "quote-style"
       ]
-    },
-    {
-      "name": "paragraph",
-      "html": "<p doc-editable=\"text\" class=\"paragraph\">Paragraph</p>",
-      "label": "Paragraph"
     },
     {
       "name": "image",
