@@ -90,5 +90,7 @@
           "label": "Embeds",
           "components": ["iframe", "tweet"]
         }
-      ]
+      ],
+      
+    "metadata": []      
 }
