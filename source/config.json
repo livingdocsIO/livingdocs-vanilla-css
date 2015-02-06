@@ -2,5 +2,93 @@
   "name": "vanilla",
   "label": "Vanilla",
   "version": "0.0.1",
-  "css": ["./stylesheets/steez.css"]
+
+  "assets": {
+    "css": ["./stylesheets/steez.css"]
+  },
+  
+  "componentProperties": {
+
+    "quote-style": {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Loud"
+        },
+        {
+          "caption": "Quite",
+          "value": "quote--quite"          
+        }
+      ] 
+    },
+
+    "image-style": {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Normal"
+        },
+        {
+          "caption": "Full width",
+          "value": "image--full-width"          
+        },
+        {
+          "caption": "Left aligned",
+          "value": "image--left-aligned"          
+        }
+      ] 
+    },
+
+    "add-picture": {
+      "label": "With image",
+      "type": "option",
+      "value": "head__with-picture"
+    }
+
+  },
+
+  "imageRatios": {
+      "16:9": {
+        "label": "16:9",
+        "ratio": "16x9"
+      },
+      "4:3": {
+        "label": "4:3",
+        "ratio": "4x3"
+      },
+      "3:4": {
+        "label": "4:3",
+        "ratio": "3x4"
+      },
+      "2:3": {
+        "label": "2:3",
+        "ratio": "2x3"
+      },
+      "3:2": {
+        "label": "2:3",
+        "ratio": "3x2"
+      },
+      "square": {
+        "label": "Square",
+        "ratio": "1x1"
+      }
+    },  
+    
+    "groups": [
+        {
+          "label": "Headers",
+          "components": ["head", "head-picture", "subhead"]
+        }, {
+          "label": "Images",
+          "components": ["image"]
+        }, {
+          "label": "Text",
+          "components": ["parapgraph", "quote"]
+        }, {
+          "label": "Embeds",
+          "components": ["iframe", "tweet"]
+        }
+      ]
 }

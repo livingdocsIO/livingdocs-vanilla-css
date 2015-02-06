@@ -207,45 +207,48 @@ h1, h2, h3, h4, h5, h6 {
   content: close-quote;
 }
 
+/* Loud quote */
+.quote {
+  position: relative;
+  
+  text-align: center;
+  
+  margin: 42px 50px;  
+}
+  .quote__text {
+    font-size: 23px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+
 /* Quite quote */
 .quote--quite {
-  font-size: 15px;
-  font-weight: 500;
+  text-align: left;
   font-family: "Helvetica Neue", serif;
 
   float: left;
   width: 227px;
 
-  margin-top: 28px;
+  margin-left: 0;
+  margin-top: 14px;
   margin-right: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
   padding-top: 7px;
-  padding-left: 28px;
+  padding-left: 25px;
   padding-bottom: 7px;
 
   border-left: 3px solid rgba(0,0,0,.87);
 }
-
-  .quote--quite .quote__text {
-    margin-bottom: 0;
+  
+  .quote--quite .quote__text,
+  .quote--quite .quote__source {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;    
   }
-
-/* Loud quote */
-.quote--loud {
-  position: relative;
-  
-  text-align: center;
-  
-  margin-top: 42px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 42px;
-}
-
-  .quote--loud .quote__text {
-    font-size: 23px;
-    line-height: 1.5;
-    font-style: italic;
+  .quote--quite .quote__text {
+    margin-bottom: 7px;
   }
 
 
@@ -259,12 +262,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Normal image */
-.image--normal {
+.image {
   position: relative;
   padding-left: 144px;
   padding-right: 144px;
 }
-  .image--normal .image__caption  {
+  .image__caption  {
     top: 0;
     left: 0;
     position: absolute;
@@ -277,14 +280,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
  /* Full width image */
-.image--full {
+.image--full-width {
   position: relative;
-
+  
+  padding-left: 0;
+  padding-right: 0;
   margin-left: -161px;
   border: 10px solid rgba(0,0,0,.87);
 }
 
-  .image--full .image__caption  {
+  .image--full-width .image__caption  {
     top: 0;
     left: 0;
     right: 0;
@@ -293,9 +298,11 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     font-size: 40px;
     font-weight: 500;
+    text-align: left;
     font-family: "Helvetica Neue", sans-serif;
     text-shadow: 2px 2px 2px rgba(0,0,0,.23);
 
+    width: auto;
     padding: 28px;
 
     background-color: rgba(0,0,0,.05);
@@ -304,12 +311,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Full width image */
 .image--left-aligned { 
   float: left;
+  
   width: 360px;
   margin-top: 7px;
   margin-right: 28px;
   margin-bottom: 14px;
+  padding-left: 0;
+  padding-right: 0;
 }
   .image--left-aligned .image__caption {
-    padding-top: 7px;  
+    position: static;
+
+    text-align: left;
+
+    width: auto;
+    padding-top: 7px;
+    border-top: none;
   }
 

@@ -37,6 +37,7 @@
 
       $(document).ready(function() {
 
+        design.vanilla.assets.basePath = "/";
         // Load the design
         doc.design.load(design.vanilla);
 
@@ -45,7 +46,10 @@
           data: {
             content: [
               // Header component
-              { "component": "headPicture", 
+              { "component": "head", 
+                "styles": {
+                  "add-picture": "head__with-picture"
+                },
                 "content": { 
                   "text-dateline": "The Drone War",
                   "title": "Drone Strikes Test Legal Grounds for War on Terror",
@@ -73,9 +77,6 @@
 
               // Quote component
               { "component": "quote", 
-                "styles": {
-                  "Loud": "quote--loud"
-                },
                 "content": { 
                   "text": "That the President is authorized to use all necessary and appropriate force against those nations, organizations, or persons he determines planned, authorized, committed, or aided the terrorist attacks that occurred on September 11, 2001, or harbored such organizations or persons, in order to prevent any future acts of international terrorism against the United States by such nations, organizations or persons."
               }},
@@ -95,7 +96,7 @@
               // Quote component
               { "component": "quote", 
                 "styles": {
-                  "Quite": "quote--quite"
+                  "quote-style": "quote--quite"
                 },
                 "content": { 
                   "text": "Officials note the AUMF does not have a geographic boundary."
@@ -109,9 +110,6 @@
 
               // Image component
               { "component": "image", 
-                "styles": {
-                  "Normal": "image--normal"
-                },
                 "content": { 
                   "image": "/images/stop-drones.jpg"
               }},
@@ -128,7 +126,7 @@
               // Image component
               { "component": "image", 
                 "styles": {
-                  "Full width": "image--full"
+                  "image-style": "image--full-width"
                 },
                 "content": { 
                   "image": "/images/stop-drones.jpg"
@@ -146,7 +144,7 @@
               // Image component
               { "component": "image", 
                 "styles": {
-                  "Left aligned": "image--left-aligned"
+                  "image-style": "image--left-aligned"
                 },
                 "content": { 
                   "image": "/images/stop-drones.jpg"

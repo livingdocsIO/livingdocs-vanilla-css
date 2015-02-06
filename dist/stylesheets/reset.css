@@ -26,6 +26,7 @@ caption, th, td {
   font-weight: normal;
 }
 
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";

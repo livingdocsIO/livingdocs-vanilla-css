@@ -2,56 +2,145 @@
   "name": "vanilla",
   "label": "Vanilla",
   "version": "0.0.1",
-  "css": [
-    "./stylesheets/steez.css"
+  "assets": {
+    "css": [
+      "./stylesheets/steez.css"
+    ]
+  },
+  "componentProperties": {
+    "quote-style": {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Loud"
+        },
+        {
+          "caption": "Quite",
+          "value": "quote--quite"
+        }
+      ]
+    },
+    "image-style": {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Normal"
+        },
+        {
+          "caption": "Full width",
+          "value": "image--full-width"
+        },
+        {
+          "caption": "Left aligned",
+          "value": "image--left-aligned"
+        }
+      ]
+    },
+    "add-picture": {
+      "label": "With image",
+      "type": "option",
+      "value": "head__with-picture"
+    }
+  },
+  "imageRatios": {
+    "16:9": {
+      "label": "16:9",
+      "ratio": "16x9"
+    },
+    "4:3": {
+      "label": "4:3",
+      "ratio": "4x3"
+    },
+    "3:4": {
+      "label": "4:3",
+      "ratio": "3x4"
+    },
+    "2:3": {
+      "label": "2:3",
+      "ratio": "2x3"
+    },
+    "3:2": {
+      "label": "2:3",
+      "ratio": "3x2"
+    },
+    "square": {
+      "label": "Square",
+      "ratio": "1x1"
+    }
+  },
+  "groups": [
+    {
+      "label": "Headers",
+      "components": [
+        "head",
+        "head-picture",
+        "subhead"
+      ]
+    },
+    {
+      "label": "Images",
+      "components": [
+        "image"
+      ]
+    },
+    {
+      "label": "Text",
+      "components": [
+        "parapgraph",
+        "quote"
+      ]
+    },
+    {
+      "label": "Embeds",
+      "components": [
+        "iframe",
+        "tweet"
+      ]
+    }
   ],
   "components": [
     {
-      "name": "Title",
-      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n  <figure class=\"head__image\">\n    <img doc-image=\"image\" class=\"head__image-item\">\n    <figcaption doc-editable=\"text-image-caption\" class=\"head__image-caption\">Caption</figcaption>\n  </figure>\n</header>",
-      "label": "Title"
+      "name": "iframe",
+      "html": "<div class=\"embed\">\n  <div doc-html=\"iframe\">\n    <div class=\"embed__iframe\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
+      "label": "Iframe"
     },
     {
-      "name": "Title and lead",
-      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n</header>",
-      "label": "Title and lead"
+      "name": "tweet",
+      "html": "<div class=\"embed\">\n  <div doc-html=\"tweet\">\n    <div class=\"embed__tweet\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
+      "label": "Tweet"
     },
     {
-      "name": "Subhead",
+      "name": "head",
+      "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name<b></b></b></span>\n  </div>\n  <figure class=\"head__image\">\n    <img doc-image=\"image\" class=\"head__image-item\">\n    <figcaption doc-editable=\"text-image-caption\" class=\"head__image-caption\">Caption</figcaption>\n  </figure>  \n</header>",
+      "label": "Title",
+      "properties": [
+        "add-picture"
+      ]
+    },
+    {
+      "name": "subhead",
       "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
       "label": "Subhead"
     },
     {
-      "name": "Rule",
-      "html": "<hr class=\"rule\">",
-      "label": "Rule"
-    },
-    {
-      "name": "Paragraph",
-      "html": "<p doc-editable=\"text\" class=\"paragraph\">Tell a funky story &#x2026;</p>",
-      "label": "Paragraph"
-    },
-    {
-      "name": "Quote",
+      "name": "quote",
       "html": "<blockquote class=\"quote\">\n  <p doc-editable=\"text\" class=\"quote__text\">Quoted text</p>\n  <footer doc-editable=\"source\" class=\"quote__source\">Source (optional)</footer>\n</blockquote>",
-      "styles": [
-        {
-          "name": "Quite",
-          "type": "option",
-          "value": "quote--quite"
-        },
-        {
-          "name": "Loud",
-          "type": "option",
-          "value": "quote--loud"
-        }
-      ],
-      "label": "Quote"
+      "label": "Quote",
+      "properties": [
+        "quote-style"
+      ]
+    },
+    {
+      "name": "paragraph",
+      "html": "<p doc-editable=\"text\" class=\"paragraph\">Paragraph</p>",
+      "label": "Paragraph"
     },
     {
       "name": "image",
       "html": "<figure class=\"image\">\n  <img doc-image=\"image\" class=\"image__item\">\n  <figcaption doc-editable=\"caption\" class=\"image__caption\">Caption (optional)</figcaption>\n</figure>",
-      "label": "Bild",
+      "label": "Picture",
       "directives": {
         "image": {
           "imageRatios": [
@@ -63,22 +152,8 @@
           "allowOriginalRatio": true
         }
       },
-      "styles": [
-        {
-          "name": "Normal",
-          "type": "option",
-          "value": "image--normal"
-        },
-        {
-          "name": "Full width",
-          "type": "option",
-          "value": "image--full"
-        },
-        {
-          "name": "Left aligned",
-          "type": "option",
-          "value": "image--left-aligned"
-        }
+      "properties": [
+        "image-style"
       ]
     }
   ]
