@@ -6,7 +6,9 @@
   "assets": {
     "css": ["./stylesheets/steez.css"]
   },
-  
+
+  "wrapper": "<div class=\"wrapper doc-section\"></div>",
+
   "componentProperties": {
 
     "quote-style": {
@@ -18,9 +20,9 @@
         },
         {
           "caption": "Quite",
-          "value": "quote--quite"          
+          "value": "quote--quite"
         }
-      ] 
+      ]
     },
 
     "image-style": {
@@ -32,13 +34,13 @@
         },
         {
           "caption": "Full width",
-          "value": "image--full-width"          
+          "value": "image--full-width"
         },
         {
           "caption": "Left aligned",
-          "value": "image--left-aligned"          
+          "value": "image--left-aligned"
         }
-      ] 
+      ]
     },
 
     "add-picture": {
@@ -74,23 +76,23 @@
         "label": "Square",
         "ratio": "1x1"
       }
-    },  
-    
+    },
+
     "groups": [
         {
           "label": "Headers",
-          "components": ["head", "head-picture", "subhead"]
+          "components": ["head", "subhead"]
         }, {
           "label": "Images",
           "components": ["image"]
         }, {
           "label": "Text",
-          "components": ["parapgraph", "quote"]
+          "components": ["paragraph", "quote"]
         }, {
           "label": "Embeds",
           "components": ["iframe", "tweet"]
         }
       ],
-      
-    "metadata": []      
+
+    "metadata": []
 }
