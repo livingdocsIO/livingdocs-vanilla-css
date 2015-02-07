@@ -5,6 +5,8 @@
  * CONTENTS
  *
  *
+ * RESET................Reset styles
+ *
  * BASE
  * Page.................Global page styles
  * Shared styles........Consistent vertical rhythm
@@ -27,11 +29,65 @@
 
 
 /*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+html,body,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr,figure {
+  margin:0;
+  padding:0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+b {
+  font-weight: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/*------------------------------------*\
     #BASE
 \*------------------------------------*/
 /**
  * Page 
- */ 
+ */
 html {
   color: rgba(0,0,0,.87);
   font-weight: 400;
@@ -166,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .head__image {
     margin-left: -151px;
+    display: none;
   }
     .head__image-caption {
       font-size: 15px;
@@ -173,6 +230,10 @@ h1, h2, h3, h4, h5, h6 {
       padding-top: 7px;
       color: rgba(0,0,0,.54);
     }
+  
+  .head--with-picture .head__image {
+   display: block;
+  }
 
 
 
@@ -219,6 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   .quote__text {
     font-size: 23px;
     line-height: 1.5;
+    font-weight: 500;
     font-style: italic;
     margin-bottom: 14px;
   }
@@ -226,7 +288,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Quite quote */
 .quote--quite {
   text-align: left;
-  font-family: "Helvetica Neue", serif;
 
   float: left;
   width: 227px;
@@ -246,7 +307,8 @@ h1, h2, h3, h4, h5, h6 {
   .quote--quite .quote__source {
     font-size: 15px;
     font-weight: 500;
-    font-style: normal;    
+    font-style: normal;
+    font-family: "Helvetica Neue", serif;
   }
   .quote--quite .quote__text {
     margin-bottom: 7px;

@@ -39,7 +39,7 @@
         "add-picture": {
             "label": "With image",
             "type": "option",
-            "value": "head__with-picture"
+            "value": "head--with-picture"
         }
 
     },
