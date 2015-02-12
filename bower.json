@@ -1,6 +1,6 @@
 {
   "name": "livingdocs-vanilla-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-engine.git#~0.5.4",
     "jquery": "upfrontIO/jquery#iframe-script-eval-2.1.3"
