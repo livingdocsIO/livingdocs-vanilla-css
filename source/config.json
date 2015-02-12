@@ -44,6 +44,11 @@
 
     },
 
+    "defaultComponents": {
+        "paragraph": "paragraph",
+        "image": "image"
+    },
+
     "imageRatios": {
         "16:9": {
             "label": "16:9",
@@ -84,6 +89,11 @@
         "label": "Embeds",
         "components": ["iframe", "tweet"]
     }],
+
+    "defaultContent": [
+        { "identifier": "vanilla.head" },
+        { "identifier": "vanilla.paragraph" }
+      ],
 
     "metadata": [{
         "identifier": "title",

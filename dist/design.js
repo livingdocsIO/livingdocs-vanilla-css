@@ -45,6 +45,10 @@
       "value": "head--with-picture"
     }
   },
+  "defaultComponents": {
+    "paragraph": "paragraph",
+    "image": "image"
+  },
   "imageRatios": {
     "16:9": {
       "label": "16:9",
@@ -100,6 +104,14 @@
       ]
     }
   ],
+  "defaultContent": [
+    {
+      "identifier": "vanilla.head"
+    },
+    {
+      "identifier": "vanilla.paragraph"
+    }
+  ],
   "metadata": [
     {
       "identifier": "title",
@@ -120,16 +132,6 @@
   ],
   "components": [
     {
-      "name": "iframe",
-      "html": "<div class=\"embed\">\n  <div doc-html=\"iframe\">\n    <div class=\"embed__iframe\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
-      "label": "Iframe"
-    },
-    {
-      "name": "tweet",
-      "html": "<div class=\"embed\">\n  <div doc-html=\"tweet\">\n    <div class=\"embed__tweet\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
-      "label": "Tweet"
-    },
-    {
       "name": "head",
       "html": "<header class=\"head\">\n  <span class=\"head__dateline\" doc-editable=\"text-dateline\">Dateline</span>\n  <h1 doc-editable=\"title\" class=\"head__title\">Title</h1>\n  <div class=\"head__subline\">\n    <span class=\"head__meta head__meta--topic\" doc-editable=\"text-topic\">Topic</span>\n    <span class=\"head__meta head__meta--date\" doc-editable=\"text-date\">Date</span>\n    <span class=\"head__meta head__meta--author\">by <b class=\"head__authors-name\" doc-editable=\"text-author\">Author name</b></span>\n  </div>\n  <figure class=\"head__image\">\n    <img doc-image=\"image\" class=\"head__image-item\">\n    <figcaption doc-editable=\"text-image-caption\" class=\"head__image-caption\">Caption</figcaption>\n  </figure>\n</header>",
       "label": "Title",
@@ -143,17 +145,9 @@
       "label": "Paragraph"
     },
     {
-      "name": "subhead",
-      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
-      "label": "Subhead"
-    },
-    {
-      "name": "quote",
-      "html": "<blockquote class=\"quote\">\n  <p doc-editable=\"text\" class=\"quote__text\">Quoted text</p>\n  <footer doc-editable=\"source\" class=\"quote__source\">Source (optional)</footer>\n</blockquote>",
-      "label": "Quote",
-      "properties": [
-        "quote-style"
-      ]
+      "name": "iframe",
+      "html": "<div class=\"embed\">\n  <div doc-html=\"iframe\">\n    <div class=\"embed__iframe\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
+      "label": "Iframe"
     },
     {
       "name": "image",
@@ -172,6 +166,24 @@
       },
       "properties": [
         "image-style"
+      ]
+    },
+    {
+      "name": "tweet",
+      "html": "<div class=\"embed\">\n  <div doc-html=\"tweet\">\n    <div class=\"embed__tweet\">\n      <div class=\"embed__placeholder\"></div>\n    </div>\n  </div>\n</div>",
+      "label": "Tweet"
+    },
+    {
+      "name": "subhead",
+      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
+      "label": "Subhead"
+    },
+    {
+      "name": "quote",
+      "html": "<blockquote class=\"quote\">\n  <p doc-editable=\"text\" class=\"quote__text\">Quoted text</p>\n  <footer doc-editable=\"source\" class=\"quote__source\">Source (optional)</footer>\n</blockquote>",
+      "label": "Quote",
+      "properties": [
+        "quote-style"
       ]
     }
   ]
