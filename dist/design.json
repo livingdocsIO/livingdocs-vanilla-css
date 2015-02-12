@@ -138,14 +138,14 @@
       ]
     },
     {
-      "name": "subhead",
-      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
-      "label": "Subhead"
-    },
-    {
       "name": "paragraph",
       "html": "<p doc-editable=\"text\" class=\"paragraph\">Paragraph</p>",
       "label": "Paragraph"
+    },
+    {
+      "name": "subhead",
+      "html": "<h2 doc-editable=\"title\" class=\"subhead alpha\">Subhead</h2>",
+      "label": "Subhead"
     },
     {
       "name": "quote",
