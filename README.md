@@ -1,7 +1,7 @@
 livingdocs-design
 =================
 
-This project contains the official designs for the project Livingdocs found under the following url: [https://github.com/upfrontIO/livingdocs](https://github.com/upfrontIO/livingdocs)
+This project contains the official designs for the project Livingdocs found under the following url: [https://github.com/livingdocsIO/livingdocs](https://github.com/livingdocsIO/livingdocs)
 It defines a setup for easily creating and testing a design.
 
 ##Technical Setup
